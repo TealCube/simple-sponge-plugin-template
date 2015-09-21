@@ -24,5 +24,24 @@
  */
 package com.tealcube.minecraft.sponge.template;
 
+import com.google.inject.Inject;
+
+import org.slf4j.Logger;
+import org.spongepowered.api.event.Listener;
+import org.spongepowered.api.event.game.state.GamePreInitializationEvent;
+import org.spongepowered.api.plugin.Plugin;
+import org.spongepowered.api.plugin.PluginContainer;
+
+@Plugin(id = Version.ARTIFACT, name = Version.NAME, version = Version.VERSION)
 public final class TemplatePlugin {
+
+    @Inject private Logger logger;
+    @Inject private PluginContainer pluginContainer;
+
+    @Listener
+    public void onGamePreInitialization(GamePreInitializationEvent event) {
+        logger.debug("id = %s, name = %s, version = %s", pluginContainer.getId(), pluginContainer.getName(),
+                pluginContainer.getVersion());
+    }
+
 }
