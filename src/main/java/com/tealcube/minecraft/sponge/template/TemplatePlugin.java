@@ -40,8 +40,8 @@ public final class TemplatePlugin {
 
     @Listener
     public void onGamePreInitialization(GamePreInitializationEvent event) {
-        logger.debug("id = %s, name = %s, version = %s", pluginContainer.getId(), pluginContainer.getName(),
-                pluginContainer.getVersion());
+        logger.info(String.format("id = %s, name = %s, version = %s", pluginContainer.getId(), pluginContainer.getName(),
+                pluginContainer.getVersion()));
     }
 
 }
