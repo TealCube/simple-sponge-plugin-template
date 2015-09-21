@@ -2,11 +2,19 @@
 
 A template made for simple Sponge plugins. Uses Gradle.
 
+Includes a source templating system.
+
 ## Usage
+
+### Base Template
 - Download/fork this repository.
 - Make changes to build.gradle and settings.gradle as necessary
 - Modify project files as necessary
   - Make sure to change the package and class name of the `@Plugin` annotated class
+
+### Templating System
+- Write Java exactly as normal, putting Ant-style tokens where desired, but in src/templates instead of src/main
+  - View src/templates/java/com/tealcube/minecraft/sponge/template/Version.java for example
 
 ## Build
 
